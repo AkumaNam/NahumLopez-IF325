@@ -76,6 +76,7 @@ Partial Class Form1
         '
         'cbTipo2
         '
+        Me.cbTipo2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbTipo2.FormattingEnabled = True
         Me.cbTipo2.Items.AddRange(New Object() {"N/A", "Bicho", "Dragón", "Eléctrico", "Hada", "Lucha ", "Fuego", "Volador", "Fantasma", "Planta", "Tierra", "Hielo", "Normal", "Veneno", "Psíquico", "Roca", "Acero", "Agua"})
         Me.cbTipo2.Location = New System.Drawing.Point(6, 228)
@@ -85,6 +86,7 @@ Partial Class Form1
         '
         'cbTipo1
         '
+        Me.cbTipo1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbTipo1.FormattingEnabled = True
         Me.cbTipo1.Items.AddRange(New Object() {"Bicho", "Dragón", "Eléctrico", "Hada", "Lucha ", "Fuego", "Volador", "Fantasma", "Planta", "Tierra", "Hielo", "Normal", "Veneno", "Psíquico", "Roca", "Acero", "Agua"})
         Me.cbTipo1.Location = New System.Drawing.Point(6, 161)
@@ -112,9 +114,10 @@ Partial Class Form1
         '
         'txtNom
         '
+        Me.txtNom.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNom.Location = New System.Drawing.Point(6, 97)
         Me.txtNom.Name = "txtNom"
-        Me.txtNom.Size = New System.Drawing.Size(100, 20)
+        Me.txtNom.Size = New System.Drawing.Size(100, 21)
         Me.txtNom.TabIndex = 3
         '
         'Label2

@@ -33,7 +33,6 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cbTipo2.SelectedIndex = 0
-        cbTipo1.SelectedIndex = 0
     End Sub
 
     Private Sub txtID_MouseHover(sender As Object, e As EventArgs) Handles txtID.MouseHover
