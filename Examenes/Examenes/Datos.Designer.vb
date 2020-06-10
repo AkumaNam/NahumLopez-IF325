@@ -75,7 +75,7 @@ Partial Class Datos
         'LBHistorial
         '
         Me.LBHistorial.FormattingEnabled = True
-        Me.LBHistorial.Location = New System.Drawing.Point(306, 34)
+        Me.LBHistorial.Location = New System.Drawing.Point(306, 25)
         Me.LBHistorial.Name = "LBHistorial"
         Me.LBHistorial.Size = New System.Drawing.Size(120, 277)
         Me.LBHistorial.TabIndex = 1
