@@ -29,11 +29,12 @@ Partial Class Datos
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtActi = New System.Windows.Forms.TextBox()
+        Me.txtRec = New System.Windows.Forms.TextBox()
+        Me.txtMuer = New System.Windows.Forms.TextBox()
         Me.cbdepa = New System.Windows.Forms.ComboBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cbEstado = New System.Windows.Forms.ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtdesc = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -48,7 +49,6 @@ Partial Class Datos
         Me.btningresar = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.ErrorValid = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.cbEstado = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.ErrorValid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -66,7 +66,7 @@ Partial Class Datos
         '
         Me.cbdepafiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbdepafiltro.FormattingEnabled = True
-        Me.cbdepafiltro.Items.AddRange(New Object() {"Todos", "Comayagua", "Francisco Morazán"})
+        Me.cbdepafiltro.Items.AddRange(New Object() {"Todos", "Atlántida", "Choluteca", "Colón", "Comayagua", "Copán", "Cortés", "El Paraíso", "Francisco Morazán", "Gracias a Dios", "Intibucá", "Islas de la Bahía", "La Paz", "Lempira", "Ocotepeque", "Olancho: Juticalpa", "Santa Bárbara", "Valle", "Yoro"})
         Me.cbdepafiltro.Location = New System.Drawing.Point(432, 12)
         Me.cbdepafiltro.Name = "cbdepafiltro"
         Me.cbdepafiltro.Size = New System.Drawing.Size(112, 21)
@@ -75,9 +75,9 @@ Partial Class Datos
         'LBHistorial
         '
         Me.LBHistorial.FormattingEnabled = True
-        Me.LBHistorial.Location = New System.Drawing.Point(304, 13)
+        Me.LBHistorial.Location = New System.Drawing.Point(306, 34)
         Me.LBHistorial.Name = "LBHistorial"
-        Me.LBHistorial.Size = New System.Drawing.Size(120, 290)
+        Me.LBHistorial.Size = New System.Drawing.Size(120, 277)
         Me.LBHistorial.TabIndex = 1
         '
         'Label1
@@ -107,35 +107,35 @@ Partial Class Datos
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Muertos"
         '
-        'TextBox1
+        'txtActi
         '
-        Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(435, 76)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 6
+        Me.txtActi.Enabled = False
+        Me.txtActi.Location = New System.Drawing.Point(435, 76)
+        Me.txtActi.Name = "txtActi"
+        Me.txtActi.Size = New System.Drawing.Size(100, 20)
+        Me.txtActi.TabIndex = 6
         '
-        'TextBox2
+        'txtRec
         '
-        Me.TextBox2.Enabled = False
-        Me.TextBox2.Location = New System.Drawing.Point(435, 147)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 7
+        Me.txtRec.Enabled = False
+        Me.txtRec.Location = New System.Drawing.Point(435, 147)
+        Me.txtRec.Name = "txtRec"
+        Me.txtRec.Size = New System.Drawing.Size(100, 20)
+        Me.txtRec.TabIndex = 7
         '
-        'TextBox3
+        'txtMuer
         '
-        Me.TextBox3.Enabled = False
-        Me.TextBox3.Location = New System.Drawing.Point(435, 222)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 8
+        Me.txtMuer.Enabled = False
+        Me.txtMuer.Location = New System.Drawing.Point(435, 222)
+        Me.txtMuer.Name = "txtMuer"
+        Me.txtMuer.Size = New System.Drawing.Size(100, 20)
+        Me.txtMuer.TabIndex = 8
         '
         'cbdepa
         '
         Me.cbdepa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbdepa.FormattingEnabled = True
-        Me.cbdepa.Items.AddRange(New Object() {"Comayagua", "Francisco Morazán"})
+        Me.cbdepa.Items.AddRange(New Object() {"Atlántida", "Choluteca", "Colón", "Comayagua", "Copán", "Cortés", "El Paraíso", "Francisco Morazán", "Gracias a Dios", "Intibucá", "Islas de la Bahía", "La Paz", "Lempira", "Ocotepeque", "Olancho: Juticalpa", "Santa Bárbara", "Valle", "Yoro"})
         Me.cbdepa.Location = New System.Drawing.Point(6, 122)
         Me.cbdepa.Name = "cbdepa"
         Me.cbdepa.Size = New System.Drawing.Size(112, 21)
@@ -162,6 +162,16 @@ Partial Class Datos
         Me.GroupBox1.TabIndex = 10
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Ingreso de datos"
+        '
+        'cbEstado
+        '
+        Me.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbEstado.FormattingEnabled = True
+        Me.cbEstado.Items.AddRange(New Object() {"Activo", "Recuperado", "Muerto"})
+        Me.cbEstado.Location = New System.Drawing.Point(10, 214)
+        Me.cbEstado.Name = "cbEstado"
+        Me.cbEstado.Size = New System.Drawing.Size(121, 21)
+        Me.cbEstado.TabIndex = 21
         '
         'Label9
         '
@@ -274,16 +284,6 @@ Partial Class Datos
         '
         Me.ErrorValid.ContainerControl = Me
         '
-        'cbEstado
-        '
-        Me.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbEstado.FormattingEnabled = True
-        Me.cbEstado.Items.AddRange(New Object() {"Activo", "Recuperado", "Muerto"})
-        Me.cbEstado.Location = New System.Drawing.Point(10, 214)
-        Me.cbEstado.Name = "cbEstado"
-        Me.cbEstado.Size = New System.Drawing.Size(121, 21)
-        Me.cbEstado.TabIndex = 21
-        '
         'Datos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -292,9 +292,9 @@ Partial Class Datos
         Me.ControlBox = False
         Me.Controls.Add(Me.btningresar)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtMuer)
+        Me.Controls.Add(Me.txtRec)
+        Me.Controls.Add(Me.txtActi)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -318,9 +318,9 @@ Partial Class Datos
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtActi As TextBox
+    Friend WithEvents txtRec As TextBox
+    Friend WithEvents txtMuer As TextBox
     Friend WithEvents cbdepa As ComboBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label9 As Label
